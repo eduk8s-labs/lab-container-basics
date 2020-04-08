@@ -15,4 +15,5 @@ modules:
     - creating-images/05-using-a-dockerfile
     - creating-images/06-choosing-a-base
     - creating-images/07-system-packages
+    - creating-images/08-sharing-images
     - workshop-summary

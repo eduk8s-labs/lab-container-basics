@@ -26,6 +26,8 @@ modules:
         name: Choosing a Base
     creating-images/07-system-packages:
         name: System Packages
+    creating-images/08-sharing-images:
+        name: Sharing Images
     workshop-summary:
         name: Workshop Summary
         exit_sign: Finish Workshop
