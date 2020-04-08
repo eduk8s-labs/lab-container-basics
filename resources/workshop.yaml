@@ -16,8 +16,6 @@ spec:
       terminal:
         enabled: true
         layout: split
-      console:
-        enabled: true
     env:
     - name: REGISTRY_HOST
       value: $(session_namespace)-registry.$(ingress_domain)
