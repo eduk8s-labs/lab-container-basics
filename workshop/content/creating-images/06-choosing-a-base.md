@@ -10,8 +10,6 @@ Popular choices for base images are:
 * [Ubuntu](https://hub.docker.com/_/ubuntu)
 * [Alpine](https://hub.docker.com/_/alpine)
 
-If you require a supported base image and have a Red Hat subscription you could also use a Red Hat Enterprise Linux (RHEL) base image. This can be a full RHEL base image, or Red Hat also makes available a set of [Universal Base Images (UBI)](https://www.redhat.com/en/blog/introducing-red-hat-universal-base-image). These are RHEL based images, but with different levels of functionality included. The full featured variants of these images still require a Red Hat subscription, but the less functional variants can be used and distributed without a subscription.
-
 For the remainder of this workshop we will be using a Fedora base image.
 
 Delete the `greeting` image created from the `busybox` image.

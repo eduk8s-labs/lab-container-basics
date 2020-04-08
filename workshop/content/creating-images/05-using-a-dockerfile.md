@@ -50,10 +50,10 @@ The output should be similar to:
 
 ```
 ID             CREATED         CREATED BY                                      SIZE      COMMENT
-460214264921   9 minutes ago   /bin/sh -c #(nop) CMD [ "/hello" ]              0B
-8021112aa5fe   9 seconds ago   /bin/sh -c #(nop) COPY hello goodbye /          3.072kB
-19485c79a9bb   2 weeks ago     /bin/sh -c #(nop) CMD ["sh"]                    3.072kB
-<missing>      2 weeks ago     /bin/sh -c #(nop) ADD file:9151f4d22f19f41...   1.437MB
+ede46634cf16   2 seconds ago   /bin/sh -c #(nop) CMD [ "/hello" ]              0B
+<missing>      3 seconds ago   /bin/sh -c #(nop) COPY multi:8d6efaf2ac012...   3.072kB
+83aa35aa1c79   4 weeks ago     /bin/sh -c #(nop) CMD ["sh"]                    0B
+<missing>      4 weeks ago     /bin/sh -c #(nop) ADD file:450bea8cddb743e...   1.437MB
 ```
 
 You can see that a layer has been created in the container image for the `COPY` and `CMD` statements from our `Dockerfile`.
@@ -71,5 +71,3 @@ podman run --rm greeting /goodbye
 ```
 
 For a full list of the instructions you can use in a `Dockerfile` check out the [Dockerfile reference](https://docs.docker.com/engine/reference/builder/).
-
-The workshop will not be going through everything you can do from a `Dockerfile`. Instructions you can use in a `Dockerfile` will be introduced, and the `COPY` and `CMD` statements covered in more details as necessary, as we proceed through the remainder of the workshop.

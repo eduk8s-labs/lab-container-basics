@@ -67,13 +67,15 @@ You should see output similar to:
 
 ```
 STEP 1: FROM fedora:30
-STEP 2: RUN dnf install -y findutils procps which &&     dnf clean -y --enablerepo='*' all
---> Using cache ec436ed2924bd57d82609bc5a4bc26a9f2d76cd0a764515b8b618a138aab68e5
+STEP 2: RUN dnf install -y --setopt=tsflags=nodocs findutils procps which &&     dnf clean -y --enablerepo='
+*' all
+--> Using cache f461319dbea6f45ce367e7038beccf6c1359155c002426caa0f3c2f9a21ebb61
 STEP 3: COPY hello goodbye /
-cdce36e0893f68baaa8d661a375cbde6c83fdf69f4027cac961a62f9d1722a33
+--> d337d264928
 STEP 4: CMD [ "/hello" ]
 STEP 5: COMMIT greeting
-907579d892d502a1daabb9fe5813906e21648381f39b38b49a72b6aa3c8a3162
+--> ea55443ead1
+ea55443ead156213149a715f0169e68780df8e02a089158804e204b44af25451
 ```
 
 Pay close attention and you will see that the command defined by the `RUN` instruction wasn't executed this time, and instead a cached copy of that layer was used. This is because nothing about the instruction had changed, nor had any base layers changed.
