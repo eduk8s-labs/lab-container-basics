@@ -9,7 +9,7 @@ spec:
   url: https://github.com/eduk8s-labs/lab-container-basics
   #image: quay.io/eduk8s-labs/lab-container-basics:master
   content: github.com/eduk8s-labs/lab-container-basics
-  duration: 1h
+  duration: 45m
   session:
     budget: medium
     applications:
