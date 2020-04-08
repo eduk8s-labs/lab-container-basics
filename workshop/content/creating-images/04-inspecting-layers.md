@@ -7,10 +7,10 @@ podman history greeting
 The output should be similar to:
 
 ```
-ID             CREATED         CREATED BY                                      SIZE      COMMENT
-b242dd054dde   4 minutes ago   /bin/sh                                         9.216kB
-19485c79a9bb   6 days ago      /bin/sh -c #(nop) CMD ["sh"]                    9.216kB
-<missing>      6 days ago      /bin/sh -c #(nop) ADD file:9151f4d22f19f41...   1.437MB
+ID             CREATED          CREATED BY                                      SIZE      COMMENT
+2c7f2c2d7c26   30 seconds ago   /bin/sh                                         9.216kB
+83aa35aa1c79   4 weeks ago      /bin/sh -c #(nop) CMD ["sh"]                    0B
+<missing>      4 weeks ago      /bin/sh -c #(nop) ADD file:450bea8cddb743e...   1.437MB
 ```
 
 The top layer has captured the changes you made from the interactive shell session of the running container. The other layers were inherited from the `busybox` container image.
