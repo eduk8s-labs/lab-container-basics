@@ -11,13 +11,13 @@ The next step is that you need to tag your container image with a name that inco
 The name of your image at this point is ``greeting``, so to tag it with a name including the name of the image registry, you need to run:
 
 ```execute
-podman tag greeting:latest %registry_host%/greeting:latest
+podman tag greeting:latest %REGISTRY_HOST%/greeting:latest
 ```
 
 To push the image to the image registry, then run:
 
 ```execute
-podman push %registry_host%/greeting:latest
+podman push %REGISTRY_HOST%/greeting:latest
 ```
 
 The command works out which image registry to push it to from the tag you added which include the registry name.
@@ -25,5 +25,5 @@ The command works out which image registry to push it to from the tag you added 
 Anyway with the appropriate access to the image registry could know pull it down to a different host by running:
 
 ```execute
-podman pull %registry_host%/greeting:latest
+podman pull %REGISTRY_HOST%/greeting:latest
 ```
