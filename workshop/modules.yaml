@@ -20,13 +20,11 @@ modules:
         name: Container to Image
     creating-images/04-inspecting-layers:
         name: Inspecting Layers
-    creating-images/05-save-and-load:
-        name: Save and Load
-    creating-images/06-using-a-dockerfile:
+    creating-images/05-using-a-dockerfile:
         name: Using a Dockerfile
-    creating-images/07-choosing-a-base:
+    creating-images/06-choosing-a-base:
         name: Choosing a Base
-    creating-images/08-system-packages:
+    creating-images/07-system-packages:
         name: System Packages
     workshop-summary:
         name: Workshop Summary
