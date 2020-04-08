@@ -7,10 +7,14 @@ podman ps -a
 Because we have started a number of containers, you should see multiple stopped containers listed.
 
 ```
-CONTAINER ID  IMAGE                             COMMAND  CREATED         STATUS                     PORTS  NAMES
-bc6140b151f1  docker.io/library/busybox:latest  sh       9 minutes ago   Exited (0) 7 minutes ago          optimistic_yonath
-5c2547826248  docker.io/library/busybox:latest  date     10 minutes ago  Exited (0) 10 minutes ago         dazzling_elgamal
-0821c06bed60  docker.io/library/busybox:latest  date     10 minutes ago  Exited (0) 10 minutes ago         mystifying_euler
+CONTAINER ID  IMAGE                             COMMAND  CREATED             STATUS                     PORT
+S  NAMES
+45e9a2513d64  docker.io/library/busybox:latest  sh       About a minute ago  Exited (0) 24 seconds ago
+   elastic_margulis
+16a584405878  docker.io/library/busybox:latest  date     2 minutes ago       Exited (0) 2 minutes ago
+   adoring_mendeleev
+10643c0c755e  docker.io/library/busybox:latest  date     3 minutes ago       Exited (0) 3 minutes ago
+   practical_elbakyan
 ```
 
 When we ran the containers, we ran them in the foreground, with any output from the containers displayed in the terminal.

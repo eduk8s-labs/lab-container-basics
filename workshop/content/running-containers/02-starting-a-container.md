@@ -13,12 +13,13 @@ podman run docker.io/busybox:latest date
 The final output should be similar to:
 
 ```
-Trying to pull docker.io/busybox:latest...Getting image source signatures
-Copying blob ee153a04d683 done
-Copying config db8ee88ad7 done
+Trying to pull docker.io/busybox:latest...
+Getting image source signatures
+Copying blob 0669b0daf1fb done
+Copying config 83aa35aa1c done
 Writing manifest to image destination
 Storing signatures
-Sat Aug 31 09:29:04 UTC 2019
+Wed Apr  8 06:00:29 UTC 2020
 ```
 
 The command logs details about the steps taken to pull down the image to the local environment. Once that process is complete, a container is started from the container image and the `date` command specified on the command line is run inside of the container. Because the `date` command exits immediately, the container is shutdown straight away.
@@ -43,7 +44,7 @@ This should output details similar to:
 
 ```
 REPOSITORY                  TAG      IMAGE ID       CREATED       SIZE
-docker.io/library/busybox   latest   db8ee88ad75f   6 weeks ago   1.44 MB
+docker.io/library/busybox   latest   83aa35aa1c79   4 weeks ago   1.44 MB
 ```
 
 If necessary, `podman run` will pull down the container image the first time it is required. If you wanted to pull down images in advance of them being run, you can use the `podman pull` command:
