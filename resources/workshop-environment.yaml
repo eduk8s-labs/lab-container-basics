@@ -1,11 +1,11 @@
 apiVersion: training.eduk8s.io/v1alpha1
 kind: WorkshopEnvironment
 metadata:
-  name: lab-markdown-sample
+  name: lab-container-basics
 spec:
   workshop:
-    name: lab-markdown-sample
+    name: lab-container-basics
   request:
-    token: lab-markdown-sample
+    token: lab-container-basics
   session:
     username: eduk8s

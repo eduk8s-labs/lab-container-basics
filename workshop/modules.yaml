@@ -1,12 +1,33 @@
 modules:
     workshop-overview:
         name: Workshop Overview
-        exit_sign: Setup Environment
-    setup-environment:
-        name: Setup Environment
         exit_sign: Start Workshop
-    exercises/01-sample-content:
-        name: Sample Content
+    running-containers/01-introducing-podman:
+        name: Introducing Podman
+    running-containers/02-starting-a-container:
+        name: Starting a Container
+    running-containers/03-interactive-terminal:
+        name: Interactive Terminal
+    running-containers/04-stopped-containers:
+        name: Stopped Containers
+    running-containers/05-networked-services:
+        name: Networked Services
+    creating-images/01-what-are-images:
+        name: What are Images
+    creating-images/02-building-an-image:
+        name: Building an Image
+    creating-images/03-container-to-image:
+        name: Container to Image
+    creating-images/04-inspecting-layers:
+        name: Inspecting Layers
+    creating-images/05-save-and-load:
+        name: Save and Load
+    creating-images/06-using-a-dockerfile:
+        name: Using a Dockerfile
+    creating-images/07-choosing-a-base:
+        name: Choosing a Base
+    creating-images/08-system-packages:
+        name: System Packages
     workshop-summary:
         name: Workshop Summary
         exit_sign: Finish Workshop

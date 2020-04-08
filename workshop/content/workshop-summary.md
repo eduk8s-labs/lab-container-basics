@@ -1,1 +1,5 @@
-This is the last page of the workshop. Include in this page a summary of the workshop and any links to resources relevant to the workshop. This ensures anyone doing the workshop has material they can research later to learn more.
+In this workshop we have been through a range of topics about using and building container images. This has included using `podman` to run containers and build container images.
+
+For further information on `podman` see:
+
+* https://podman.io/
