@@ -20,9 +20,9 @@ To push the image to the image registry, then run:
 podman push %REGISTRY_HOST%/greeting:latest
 ```
 
-The command works out which image registry to push it to from the tag you added which include the registry name.
+The command works out which image registry to push it to from the tag you added which includes the registry name.
 
-Anyway with the appropriate access to the image registry could know pull it down to a different host by running:
+Anyone with the appropriate access to the image registry could now pull it down to a different host by running:
 
 ```execute
 podman pull %REGISTRY_HOST%/greeting:latest
