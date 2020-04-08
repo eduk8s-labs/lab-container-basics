@@ -4,8 +4,8 @@ metadata:
   name: lab-container-basics
 spec:
   vendor: eduk8s.io
-  title: Podman Testing
-  description: Play area for testing podman
+  title: Container Basics
+  description: An interactive workshop on running applications in containers.
   url: https://github.com/eduk8s-labs/lab-container-basics
   #image: quay.io/eduk8s-labs/lab-container-basics:master
   content: github.com/eduk8s-labs/lab-container-basics
