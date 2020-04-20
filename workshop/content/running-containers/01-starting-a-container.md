@@ -13,13 +13,12 @@ docker run docker.io/busybox:latest date
 The final output should be similar to:
 
 ```
-Trying to pull docker.io/busybox:latest...
-Getting image source signatures
-Copying blob 0669b0daf1fb done
-Copying config 83aa35aa1c done
-Writing manifest to image destination
-Storing signatures
-Wed Apr  8 06:00:29 UTC 2020
+Unable to find image 'busybox:latest' locally
+latest: Pulling from library/busybox
+e2334dd9fee4: Pull complete
+Digest: sha256:a8cf7ff6367c2afa2a90acd081b484cbded349a7076e7bdf37a05279f276bc12
+Status: Downloaded newer image for busybox:latest
+Mon Apr 20 00:11:37 UTC 2020
 ```
 
 The command logs details about the steps taken to pull down the image to the local environment. Once that process is complete, a container is started from the container image and the `date` command specified on the command line is run inside of the container. Because the `date` command exits immediately, the container is shutdown straight away.
@@ -43,8 +42,8 @@ docker images
 This should output details similar to:
 
 ```
-REPOSITORY                  TAG      IMAGE ID       CREATED       SIZE
-docker.io/library/busybox   latest   83aa35aa1c79   4 weeks ago   1.44 MB
+REPOSITORY  TAG     IMAGE ID      CREATED     SIZE
+busybox     latest  be5888e67be6  5 days ago  1.22MB
 ```
 
 If necessary, `docker run` will pull down the container image the first time it is required. If you wanted to pull down images in advance of them being run, you can use the `docker pull` command:

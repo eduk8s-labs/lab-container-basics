@@ -2,10 +2,10 @@ All the containers you have run so far remained attached to the terminal from wh
 
 Long lived network services run in a container will need to be detached from the terminal and run as a background process.
 
-To run a web server using the `busybox` image, which serves up files from the local `htdocs` directory, run:
+To run a web server using the `busybox` image run:
 
 ```execute
-docker run --rm -d --name httpd -p 80:80 -v `pwd`/htdocs:/htdocs busybox httpd -f -h /htdocs -vv
+docker run --rm -d --name httpd -p 80:80 busybox httpd -f -vv
 ```
 
 The `-d` option to `docker run` causes the container to be detached from the terminal and run in the background.
@@ -14,11 +14,9 @@ To allow us to more easily identify and interact with the container, we use the 
 
 As the web server is a network service, we need to specify the network ports it exposes. This is done using the `-p` option.
 
-The `-v` option is used to mount the local `htdocs` directory into the container so the web server can access the files it contains.
+Finally, for the command run in the container, we use `httpd -f -vv`.
 
-Finally, for the command run in the container, we use `httpd -f -h /htdocs -vv`.
-
-The `-f` option to `httpd` ensures that the web server runs as a foreground process within the context of the container. If this is not done, the container would exit immediately. The `-h` option gives the location of the files to serve, and `-vv` enables verbose logging.
+The `-f` option to `httpd` ensures that the web server runs as a foreground process within the context of the container. If this is not done, the container would exit immediately. The `-vv` enables verbose logging.
 
 To verify that the container is running, run:
 
@@ -42,8 +40,10 @@ curl localhost
 
 and you should see the details of the request logged.
 
+In this case we get an error from the web server as we didn't provide it any files to serve up.
+
 As the container has been detached from the terminal, to stop the container you need to run:
 
 ```execute-2
-docker stop --timeout 2 httpd
+docker stop --time 2 httpd
 ```

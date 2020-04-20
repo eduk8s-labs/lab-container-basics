@@ -7,14 +7,14 @@ docker ps -a
 Because we have started a number of containers, you should see multiple stopped containers listed.
 
 ```
-CONTAINER ID  IMAGE                             COMMAND  CREATED             STATUS                     PORT
-S  NAMES
-45e9a2513d64  docker.io/library/busybox:latest  sh       About a minute ago  Exited (0) 24 seconds ago
-   elastic_margulis
-16a584405878  docker.io/library/busybox:latest  date     2 minutes ago       Exited (0) 2 minutes ago
-   adoring_mendeleev
-10643c0c755e  docker.io/library/busybox:latest  date     3 minutes ago       Exited (0) 3 minutes ago
-   practical_elbakyan
+CONTAINER ID        IMAGE               COMMAND             CREATED              STATUS
+ PORTS               NAMES
+ae576793e3e9        busybox             "sh"                About a minute ago   Exited (0) 16 seconds ago
+                     recursing_leavitt
+e894e7d5790f        busybox:latest      "date"              3 minutes ago        Exited (0) 3 minutes ago
+                     heuristic_bassi
+9d1706a4b51f        busybox:latest      "date"              3 minutes ago        Exited (0) 3 minutes ago
+                     inspiring_banzai
 ```
 
 When we ran the containers, we ran them in the foreground, with any output from the containers displayed in the terminal.

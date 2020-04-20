@@ -35,9 +35,10 @@ docker ps
 You should see the container you started above running the interactive shell.
 
 ```
-CONTAINER ID  IMAGE                             COMMAND  CREATED         STATUS             PORTS  NAMES
-45e9a2513d64  docker.io/library/busybox:latest  sh       37 seconds ago  Up 37 seconds ago         elastic_m
-argulis
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS
+            NAMES
+ae576793e3e9        busybox             "sh"                32 seconds ago      Up 31 seconds
+            recursing_leavitt
 ```
 
 To access an existing container from the container host and run a command within it, you can use the `docker exec` command. As with `docker run`, if running a command that requires an interactive terminal, use the `-it` options.
