@@ -7,10 +7,11 @@ docker history greeting
 The output should be similar to:
 
 ```
-ID             CREATED          CREATED BY                                      SIZE      COMMENT
-2c7f2c2d7c26   30 seconds ago   /bin/sh                                         9.216kB
-83aa35aa1c79   4 weeks ago      /bin/sh -c #(nop) CMD ["sh"]                    0B
-<missing>      4 weeks ago      /bin/sh -c #(nop) ADD file:450bea8cddb743e...   1.437MB
+IMAGE               CREATED             CREATED BY                                      SIZE
+COMMENT
+bd7223c52540        23 seconds ago      sh                                              124B
+be5888e67be6        5 days ago          /bin/sh -c #(nop)  CMD ["sh"]                   0B
+<missing>           5 days ago          /bin/sh -c #(nop) ADD file:09a89925137e1b768…   1.22MB
 ```
 
 The top layer has captured the changes you made from the interactive shell session of the running container. The other layers were inherited from the `busybox` container image.

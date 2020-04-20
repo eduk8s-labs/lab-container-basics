@@ -66,16 +66,21 @@ docker build -t greeting .
 You should see output similar to:
 
 ```
-STEP 1: FROM fedora:30
-STEP 2: RUN dnf install -y --setopt=tsflags=nodocs findutils procps which &&     dnf clean -y --enablerepo='
-*' all
---> Using cache f461319dbea6f45ce367e7038beccf6c1359155c002426caa0f3c2f9a21ebb61
-STEP 3: COPY hello goodbye /
---> d337d264928
-STEP 4: CMD [ "/hello" ]
-STEP 5: COMMIT greeting
---> ea55443ead1
-ea55443ead156213149a715f0169e68780df8e02a089158804e204b44af25451
+Sending build context to Docker daemon  4.096kB
+Step 1/4 : FROM fedora:30
+ ---> 177d5adf0c6c
+Step 2/4 : RUN dnf install -y --setopt=tsflags=nodocs findutils procps which &&     dnf clean -y --enablerep
+o='*' all
+ ---> Using cache
+ ---> 79c46abae72f
+Step 3/4 : COPY hello goodbye /
+ ---> Using cache
+ ---> de25ec3a39cd
+Step 4/4 : CMD [ "/hello" ]
+ ---> Using cache
+ ---> dea14d4ae69d
+Successfully built dea14d4ae69d
+Successfully tagged greeting:latest
 ```
 
 Pay close attention and you will see that the command defined by the `RUN` instruction wasn't executed this time, and instead a cached copy of that layer was used. This is because nothing about the instruction had changed, nor had any base layers changed.

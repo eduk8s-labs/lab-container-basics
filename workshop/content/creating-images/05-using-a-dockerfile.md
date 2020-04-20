@@ -49,11 +49,12 @@ docker history greeting
 The output should be similar to:
 
 ```
-ID             CREATED         CREATED BY                                      SIZE      COMMENT
-ede46634cf16   2 seconds ago   /bin/sh -c #(nop) CMD [ "/hello" ]              0B
-<missing>      3 seconds ago   /bin/sh -c #(nop) COPY multi:8d6efaf2ac012...   3.072kB
-83aa35aa1c79   4 weeks ago     /bin/sh -c #(nop) CMD ["sh"]                    0B
-<missing>      4 weeks ago     /bin/sh -c #(nop) ADD file:450bea8cddb743e...   1.437MB
+IMAGE               CREATED             CREATED BY                                      SIZE
+COMMENT
+0ac1216f0e3f        4 seconds ago       /bin/sh -c #(nop)  CMD ["/hello"]               0B
+aeea9801fb6a        4 seconds ago       /bin/sh -c #(nop) COPY multi:03e82c91fe5fcae…   50B
+be5888e67be6        5 days ago          /bin/sh -c #(nop)  CMD ["sh"]                   0B
+<missing>           5 days ago          /bin/sh -c #(nop) ADD file:09a89925137e1b768…   1.22MB
 ```
 
 You can see that a layer has been created in the container image for the `COPY` and `CMD` statements from our `Dockerfile`.
