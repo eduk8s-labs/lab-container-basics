@@ -34,13 +34,13 @@ Although having basic UNIX utilities available is useful, you don't need to have
 Build the image by running:
 
 ```execute
-podman build -t greeting .
+docker build -t greeting .
 ```
 
 List the layers of the container image created:
 
 ```execute
-podman history greeting
+docker history greeting
 ```
 
 You will see that the `RUN` instruction is reflected in the container image as it's own separate layer.
@@ -60,7 +60,7 @@ touch hello
 and run the build again.
 
 ```execute
-podman build -t greeting .
+docker build -t greeting .
 ```
 
 You should see output similar to:

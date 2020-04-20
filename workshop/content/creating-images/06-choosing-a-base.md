@@ -15,7 +15,7 @@ For the remainder of this workshop we will be using a Fedora base image.
 Delete the `greeting` image created from the `busybox` image.
 
 ```execute
-podman rmi greeting
+docker rmi greeting
 ```
 
 Change location to the `~/greeting-v2` sub directory.
@@ -45,7 +45,7 @@ Only the `FROM` instruction has been changed. This time the `fedora:30` base ima
 Build the image by running:
 
 ```execute
-podman build -t greeting .
+docker build -t greeting .
 ````
 
 The build may take a little bit longer as the `fedora` base image needs to be pulled down and it is somewhat larger than the more minimal `busybox` base image.
@@ -53,13 +53,13 @@ The build may take a little bit longer as the `fedora` base image needs to be pu
 When the build has completed check that the container image runs:
 
 ```execute
-podman run --rm greeting
+docker run --rm greeting
 ```
 
 Run the image again but this time create an interactive shell.
 
 ```execute
-podman run -it --rm greeting /bin/bash
+docker run -it --rm greeting /bin/bash
 ```
 
 From the interactive shell, you can dig around inside the container image. You will see that it contains a complete base Fedora operating system environment.

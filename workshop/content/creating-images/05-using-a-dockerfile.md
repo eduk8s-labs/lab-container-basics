@@ -37,13 +37,13 @@ The `CMD` instruction is used to set the command which should be run if the cont
 To build a container image using the instructions in the `Dockerfile` run:
 
 ```execute
-podman build -t greeting .
+docker build -t greeting .
 ```
 
 Look at the layers of the container image by running:
 
 ```execute
-podman history greeting
+docker history greeting
 ```
 
 The output should be similar to:
@@ -61,13 +61,13 @@ You can see that a layer has been created in the container image for the `COPY` 
 To run the container image, run:
 
 ```execute
-podman run --rm greeting
+docker run --rm greeting
 ```
 
 Or to run an alternative command, use:
 
 ```execute
-podman run --rm greeting /goodbye
+docker run --rm greeting /goodbye
 ```
 
 For a full list of the instructions you can use in a `Dockerfile` check out the [Dockerfile reference](https://docs.docker.com/engine/reference/builder/).

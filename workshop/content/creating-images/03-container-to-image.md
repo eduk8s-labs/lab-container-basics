@@ -3,7 +3,7 @@ The first method for constructing a container image is to run a container using 
 To illustrate this method, first start an instance of the `busybox` container with an interactive shell.
 
 ```execute
-podman run -it --name session busybox sh
+docker run -it --name session busybox sh
 ```
 
 You would now run any commands to install additional packages. In the case of the `busybox` container image, it doesn't provide a package manager, so we will limit ourselves to creating an executable script file that we can run. To create the script file run:
@@ -43,7 +43,7 @@ chmod +x goodbye
 Copy this script file into the container by running:
 
 ```execute-2
-podman cp goodbye session:/goodbye
+docker cp goodbye session:/goodbye
 ```
 
 Because we named the container with the name `session` we could use it in the target for where the file should be copied. If you hadn't named the container, you would need to use the container ID.
@@ -63,33 +63,33 @@ exit
 At this point the container has been stopped, as we exited the interactive shell process that was keeping it running. You can see that it has stopped by running:
 
 ```execute
-podman ps -a
+docker ps -a
 ```
 
-Although it has been stopped, because we didn't use the `--rm` option with `podman run`, the state of the container has been retained, including the changes we made to the filesystem from inside of the container.
+Although it has been stopped, because we didn't use the `--rm` option with `docker run`, the state of the container has been retained, including the changes we made to the filesystem from inside of the container.
 
 To create a container image from the saved state of the container, run:
 
 ```execute
-podman commit --change='CMD ["/hello"]' session greeting
+docker commit --change='CMD ["/hello"]' session greeting
 ```
 
 The name of the container image you created was `greeting`. To see details for the container image run:
 
 ```execute
-podman images
+docker images
 ```
 
 To run the container image, run:
 
 ```execute
-podman run --rm greeting
+docker run --rm greeting
 ```
 
-You were able to run the container image without specifying what command to run within the container, as the `--change` option used with `podman commit` above overrides the default command run when the container image is started.
+You were able to run the container image without specifying what command to run within the container, as the `--change` option used with `docker commit` above overrides the default command run when the container image is started.
 
 You can still run the container image with an alternative command if required.
 
 ```execute
-podman run --rm greeting /goodbye
+docker run --rm greeting /goodbye
 ```
