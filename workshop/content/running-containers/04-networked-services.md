@@ -5,10 +5,10 @@ Long lived network services run in a container will need to be detached from the
 To run a web server using the `busybox` image, which serves up files from the local `htdocs` directory, run:
 
 ```execute
-podman run --rm -d --name httpd -p 80:80 -v `pwd`/htdocs:/htdocs busybox httpd -f -h /htdocs -vv
+docker run --rm -d --name httpd -p 80:80 -v `pwd`/htdocs:/htdocs busybox httpd -f -h /htdocs -vv
 ```
 
-The `-d` option to `podman run` causes the container to be detached from the terminal and run in the background.
+The `-d` option to `docker run` causes the container to be detached from the terminal and run in the background.
 
 To allow us to more easily identify and interact with the container, we use the `--name` option to give it the name `httpd`.
 
@@ -23,13 +23,13 @@ The `-f` option to `httpd` ensures that the web server runs as a foreground proc
 To verify that the container is running, run:
 
 ```execute
-podman ps
+docker ps
 ```
 
 To tail the output from the container, run:
 
 ```execute
-podman logs -f httpd
+docker logs -f httpd
 ```
 
 Instead of the container ID, we use the `httpd` name we assigned to the container. The `-f` option says to tail the log files continually.
@@ -45,5 +45,5 @@ and you should see the details of the request logged.
 As the container has been detached from the terminal, to stop the container you need to run:
 
 ```execute-2
-podman stop --timeout 2 httpd
+docker stop --timeout 2 httpd
 ```

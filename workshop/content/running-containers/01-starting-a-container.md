@@ -1,13 +1,13 @@
-To start an application inside of a container using `podman` or `docker`, you need to have a container image. The container image acts as a packaging mechanism for distributing an application, and includes the application software, operating system files, libraries and other software required by the application to run.
+To start an application inside of a container using `docker`, you need to have a container image. The container image acts as a packaging mechanism for distributing an application, and includes the application software, operating system files, libraries and other software required by the application to run.
 
 Prebuilt container images for applications, or a base container image upon which you may build your own container image, are distributed using image registries.
 
 The two main hosted image registry services that exist are [Docker Hub](https://hub.docker.com/) and [Quay.io](https://quay.io/). Support for hosting and distributing container images is also available from Git repository hosting services such as [GitHub](http://github.com/) and [GitLab](https://gitlab.com/).
 
-To pull down and run an existing container image from an image registry using `podman` run:
+To pull down and run an existing container image from an image registry using `docker` run:
 
 ```execute
-podman run docker.io/busybox:latest date
+docker run docker.io/busybox:latest date
 ```
 
 The final output should be similar to:
@@ -29,7 +29,7 @@ In this case the container image which was used was called `busybox`. This is a 
 If you run the command a second time:
 
 ```execute
-podman run docker.io/busybox:latest date
+docker run docker.io/busybox:latest date
 ```
 
 you will see that it executes the `date` command immediately and does not log any details about needing to first pull down the container image. This is because the container image has been cached in the local environment and will be used on subsequent runs.
@@ -37,7 +37,7 @@ you will see that it executes the `date` command immediately and does not log an
 You can see what container images have been pulled down to the local environment by running:
 
 ```execute
-podman images
+docker images
 ```
 
 This should output details similar to:
@@ -47,8 +47,8 @@ REPOSITORY                  TAG      IMAGE ID       CREATED       SIZE
 docker.io/library/busybox   latest   83aa35aa1c79   4 weeks ago   1.44 MB
 ```
 
-If necessary, `podman run` will pull down the container image the first time it is required. If you wanted to pull down images in advance of them being run, you can use the `podman pull` command:
+If necessary, `docker run` will pull down the container image the first time it is required. If you wanted to pull down images in advance of them being run, you can use the `docker pull` command:
 
 ```execute
-podman pull docker.io/busybox:latest
+docker pull docker.io/busybox:latest
 ```

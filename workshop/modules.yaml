@@ -2,15 +2,13 @@ modules:
     workshop-overview:
         name: Workshop Overview
         exit_sign: Start Workshop
-    running-containers/01-introducing-podman:
-        name: Introducing Podman
-    running-containers/02-starting-a-container:
+    running-containers/01-starting-a-container:
         name: Starting a Container
-    running-containers/03-interactive-terminal:
+    running-containers/02-interactive-terminal:
         name: Interactive Terminal
-    running-containers/04-stopped-containers:
+    running-containers/03-stopped-containers:
         name: Stopped Containers
-    running-containers/05-networked-services:
+    running-containers/04-networked-services:
         name: Networked Services
     creating-images/01-what-are-images:
         name: What are Images
@@ -36,4 +34,5 @@ config:
   vars:
   - name: REGISTRY_HOST
   - name: REGISTRY_AUTH_FILE
+  - name: REGISTRY_USERNAME
   - name: REGISTRY_PASSWORD

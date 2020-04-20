@@ -4,20 +4,20 @@ The normal way to distribute container images is to push them up to an image reg
 
 To push an image to an image registry, you would first need to login to that image registry.
 
-In this workshop environment you have your own private image registry to which you have already been logged in. If you had to do it yourself you would use the ``podman login`` command, giving it the location of the image registry. You would then be prompted for the login credentials.
+In this workshop environment you have your own private image registry to which you have already been logged in. If you had to do it yourself you would use the ``docker login`` command, giving it the location of the image registry. You would then be prompted for the login credentials.
 
 The next step is that you need to tag your container image with a name that incorporates the name of the image registry.
 
 The name of your image at this point is ``greeting``, so to tag it with a name including the name of the image registry, you need to run:
 
 ```execute
-podman tag greeting:latest %REGISTRY_HOST%/greeting:latest
+docker tag greeting:latest %REGISTRY_HOST%/greeting:latest
 ```
 
 To push the image to the image registry, then run:
 
 ```execute
-podman push %REGISTRY_HOST%/greeting:latest
+docker push %REGISTRY_HOST%/greeting:latest
 ```
 
 The command works out which image registry to push it to from the tag you added which includes the registry name.
@@ -25,5 +25,5 @@ The command works out which image registry to push it to from the tag you added 
 Anyone with the appropriate access to the image registry could now pull it down to a different host by running:
 
 ```execute
-podman pull %REGISTRY_HOST%/greeting:latest
+docker pull %REGISTRY_HOST%/greeting:latest
 ```

@@ -3,11 +3,10 @@ name: Container Basics
 modules:
     activate:
     - workshop-overview
-    - running-containers/01-introducing-podman
-    - running-containers/02-starting-a-container
-    - running-containers/03-interactive-terminal
-    - running-containers/04-stopped-containers
-    - running-containers/05-networked-services
+    - running-containers/01-starting-a-container
+    - running-containers/02-interactive-terminal
+    - running-containers/03-stopped-containers
+    - running-containers/04-networked-services
     - creating-images/01-what-are-images
     - creating-images/02-building-an-image
     - creating-images/03-container-to-image
