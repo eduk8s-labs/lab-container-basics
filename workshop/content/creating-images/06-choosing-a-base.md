@@ -21,7 +21,7 @@ docker rmi greeting
 Change location to the `~/greeting-v2` sub directory.
 
 ```execute
-cd ~/greeting-v2
+cd ~/exercises/greeting-v2
 ```
 
 View the contents of the `Dockerfile` by running:

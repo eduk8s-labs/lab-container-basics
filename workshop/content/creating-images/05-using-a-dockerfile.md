@@ -3,7 +3,7 @@ Creating a container image interactively by running commands in a running contai
 Change location to the `~/greeting-v1` sub directory.
 
 ```execute
-cd ~/greeting-v1
+cd ~/exercises/greeting-v1
 ```
 
 List the files in the directory.

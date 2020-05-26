@@ -5,7 +5,7 @@ Although you strictly only need to install additional system packages that your 
 Change location to the `~/greeting-v3` sub directory.
 
 ```execute
-cd ~/greeting-v3
+cd ~/exercises/greeting-v3
 ```
 
 View the contents of the `Dockerfile` by running:
