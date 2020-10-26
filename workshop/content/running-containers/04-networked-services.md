@@ -5,7 +5,7 @@ Long lived network services run in a container will need to be detached from the
 To run a web server using the `busybox` image run:
 
 ```execute
-docker run --rm -d --name httpd -p 80:80 busybox httpd -f -vv
+docker run --rm -d --name httpd -p 8080:80 busybox httpd -f -vv
 ```
 
 The `-d` option to `docker run` causes the container to be detached from the terminal and run in the background.
@@ -35,7 +35,7 @@ Instead of the container ID, we use the `httpd` name we assigned to the containe
 Initially there will be no log output, but make a web request against the web server by running:
 
 ```execute-2
-curl localhost
+curl localhost:8080
 ```
 
 and you should see the details of the request logged.
